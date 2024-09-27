@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários</title>
+</head>
+<body>
+    <h1>Usuários</h1>
+    <ul>
+        {% for user in users %}
+        <li>
+            {{ user.username }} - {{ user.email }}
+            <a href="{{ url_for('user_posts', user_id=user.id) }}">Ver Postagens</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('new_user') }}">Adicionar Novo Usuário</a>
+</body>
+</html>
