@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Usuário</title>
+</head>
+<body>
+    <h1>Adicionar Novo Usuário</h1>
+    <form method="POST">
+        <label for="username">Nome de Usuário:</label>
+        <input type="text" name="username" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+        <br>
+        <button type="submit">Salvar</button>
+    </form>
+    <a href="{{ url_for('users') }}">Voltar</a>
+</body>
+</html>
