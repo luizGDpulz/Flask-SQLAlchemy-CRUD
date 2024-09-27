@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postagens de {{ user.username }}</title>
+</head>
+<body>
+    <h1>Postagens de {{ user.username }}</h1>
+    <ul>
+        {% for post in posts %}
+        <li>
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.content }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('new_post') }}">Criar Nova Postagem</a>
+    <a href="{{ url_for('users') }}">Voltar</a>
+</body>
+</html>
